@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         var count = 0
 
         textView.text = textInput.text
-        poet.temperature = 0.4
+        poet.temperature = 0.2
         poet.startEvaluating(textInput.text!) { string in
             buffer = buffer + string
             count += 1
