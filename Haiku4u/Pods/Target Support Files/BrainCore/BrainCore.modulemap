@@ -1,0 +1,6 @@
+framework module BrainCore {
+  umbrella header "BrainCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
