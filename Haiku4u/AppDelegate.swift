@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var chars = ["\t", "\n", "!", " ", "\"", "$", "'", "&", ")", "(", "+", "*", "-", ",", ".", "1", "0", "3", "2", "5", "4", "6", "9", "8", ";", ":", "=", "<", "?", ">", "a", "c", "b", "e", "d", "g", "f", "i", "h", "k", "j", "m", "l", "o", "n", "q", "p", "s", "r", "u", "t", "w", "v", "y", "x", "z"]
+    var chars = ["\t", "\n", "!", " ", "\"", "$", "'", "&", ")", "(", "", "", "", ",", ".", "", "", "", "", "", "", "", " ", " ", "", "", "=", " ", "?", " ", "a", "c", "b", "e", "d", "g", "f", "i", "h", "k", "j", "m", "l", "o", "n", "q", "p", "s", "r", "u", "t", "w", "v", "y", "x", "z"]
+    
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.sharedManager().enable = true
+
         // Override point for customization after application launch.
         return true
     }

@@ -32,19 +32,26 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-Haiku4u.xcscheme</key>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Upsurge.xcscheme</key>
+		<key>Pods-Haiku4u.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
+		</dict>
+		<key>Upsurge.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

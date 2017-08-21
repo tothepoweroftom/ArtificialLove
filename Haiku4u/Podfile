@@ -8,6 +8,7 @@ target 'Haiku4u' do
     pod "HDF5Kit", "~> 0.1"
     pod "Dropper"
     pod 'EasyTipView', '~> 1.0.2'
+    pod 'IQKeyboardManagerSwift'
 
 end
 

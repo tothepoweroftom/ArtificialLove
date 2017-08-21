@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025EFF2E1F4461D80045CB4A /* haiku59.h5 in Resources */ = {isa = PBXBuildFile; fileRef = 025EFF2D1F4461D80045CB4A /* haiku59.h5 */; };
 		026620101F430E8A00110251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266200F1F430E8A00110251 /* AppDelegate.swift */; };
 		026620121F430E8A00110251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026620111F430E8A00110251 /* ViewController.swift */; };
 		026620151F430E8A00110251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026620131F430E8A00110251 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025EFF2D1F4461D80045CB4A /* haiku59.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; name = haiku59.h5; path = ../../../Downloads/haiku59.h5; sourceTree = "<group>"; };
 		0266200C1F430E8A00110251 /* Haiku4u.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haiku4u.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0266200F1F430E8A00110251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026620111F430E8A00110251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				026620161F430E8A00110251 /* Assets.xcassets */,
 				026620181F430E8A00110251 /* LaunchScreen.storyboard */,
 				0266201B1F430E8A00110251 /* Info.plist */,
+				025EFF2D1F4461D80045CB4A /* haiku59.h5 */,
 				026620271F431D0100110251 /* haiku29.h5 */,
 			);
 			path = Haiku4u;
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0266201A1F430E8A00110251 /* LaunchScreen.storyboard in Resources */,
+				025EFF2E1F4461D80045CB4A /* haiku59.h5 in Resources */,
 				026620171F430E8A00110251 /* Assets.xcassets in Resources */,
 				026620281F431D0100110251 /* haiku29.h5 in Resources */,
 				026620221F430E9500110251 /* Podfile in Resources */,
@@ -183,6 +187,7 @@
 				"${BUILT_PRODUCTS_DIR}/Dropper/Dropper.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework",
 				"${BUILT_PRODUCTS_DIR}/HDF5Kit/HDF5Kit.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Upsurge/Upsurge.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -191,6 +196,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dropper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyTipView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HDF5Kit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Upsurge.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWNK4MCTP;
 				INFOPLIST_FILE = Haiku4u/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.Haiku4u;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -396,6 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWNK4MCTP;
 				INFOPLIST_FILE = Haiku4u/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.Haiku4u;
 				PRODUCT_NAME = "$(TARGET_NAME)";

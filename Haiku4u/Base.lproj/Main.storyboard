@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +13,9 @@
         <array key="Baskerville.ttc">
             <string>Baskerville</string>
             <string>Baskerville-SemiBold</string>
+        </array>
+        <array key="Didot.ttc">
+            <string>Didot-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,35 +27,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="asdf" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="izB-xq-om7">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.92535621761658027" green="0.92535621761658027" blue="0.92535621761658027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDJ-KX-ZIV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDJ-KX-ZIV">
                                 <rect key="frame" x="119" y="594" width="137" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="17"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.92535621759999998" green="0.92535621759999998" blue="0.92535621759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="eNW-6m-3ZG"/>
+                                    <constraint firstAttribute="height" constant="53" id="lxK-HN-aCk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="25"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedStartStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTO-Rv-gsc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A summer's evening." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mk-3B-Ita">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izB-xq-om7">
+                                <rect key="frame" x="16" y="118" width="343" height="468"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1236641839" green="0.1236641839" blue="0.1236641839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.92535621759999998" green="0.92535621759999998" blue="0.92535621759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                <color key="backgroundColor" red="1" green="0.97320681809999998" blue="0.93121093509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A summer's evening." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mk-3B-Ita">
+                                <rect key="frame" x="16" y="66" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97320681810379028" blue="0.93121093511581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-ra-fwW">
+                                <rect key="frame" x="16" y="37" width="225" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.97320681809999998" blue="0.93121093509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NDJ-KX-ZIV" secondAttribute="bottom" constant="20" id="waR-7N-E6a"/>
+                            <constraint firstItem="NDJ-KX-ZIV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ygo-8W-aPj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

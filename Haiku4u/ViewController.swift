@@ -35,13 +35,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let model = "haiku29"
+        let model = "haiku59"
 
         guard let path = Bundle.main.path(forResource: model, ofType: "h5") else {
             fatalError("Weigths file not found")
         }
         poet = Poet(pathToTrainedWeights: path, chars: appDelegate.chars)
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
         
         startStopButton.layer.cornerRadius = 10.0
         startStopButton.layer.borderWidth = 1.0
@@ -54,6 +56,12 @@ class ViewController: UIViewController {
             preconditionFailure("This app will not function on the iOS Simulator because of Metal-dependent functionality.")
         #endif
     }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
     
     @IBAction func tappedStartStopButton(_ sender: AnyObject?) {
         if poet?.isEvaluating ?? false {
@@ -81,24 +89,25 @@ class ViewController: UIViewController {
         var buffer: String = ""
         var count = 0
 
-        textView.text = textInput.text
-        poet.temperature = 0.2
+        textView.text = textInput.text?.lowercased()
+        poet.temperature = 0.25
         poet.startEvaluating(textInput.text!) { string in
             buffer = buffer + string
             count += 1
-            self.charCount = self.textView.text.characters.count
-            print(self.charCount)
-            if (self.charCount > 200) {
-                self.charCount = 0
-                
-                self.stop()
-                return
-            }
+
             
             if count > 5 {
                 let bufferCopy = buffer
                 DispatchQueue.main.async() {
                     self.textView.text = self.textView.text + bufferCopy
+                    self.charCount = self.textView.text.characters.count
+                    print(self.charCount)
+                    if (self.charCount > 500) {
+                        self.charCount = 0
+                        
+                        self.stop()
+                        return
+                    }
                 }
 
                 count = 0
@@ -125,7 +134,7 @@ class ViewController: UIViewController {
     func stop() {
         poet?.stopEvaluating()
         enableControls()
-        startStopButton.setTitle("Start", for: .normal)
+        startStopButton.setTitle("Begin", for: .normal)
     }
 
 
