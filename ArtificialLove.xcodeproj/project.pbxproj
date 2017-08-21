@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		025EFF2D1F4461D80045CB4A /* haiku59.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; name = haiku59.h5; path = ../../../Downloads/haiku59.h5; sourceTree = "<group>"; };
-		0266200C1F430E8A00110251 /* Haiku4u.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haiku4u.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0266200C1F430E8A00110251 /* ArtificialLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtificialLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0266200F1F430E8A00110251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026620111F430E8A00110251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		026620141F430E8A00110251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		0266200D1F430E8A00110251 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0266200C1F430E8A00110251 /* Haiku4u.app */,
+				0266200C1F430E8A00110251 /* ArtificialLove.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0266200B1F430E8A00110251 /* Haiku4u */ = {
+		0266200B1F430E8A00110251 /* ArtificialLove */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0266201E1F430E8A00110251 /* Build configuration list for PBXNativeTarget "Haiku4u" */;
+			buildConfigurationList = 0266201E1F430E8A00110251 /* Build configuration list for PBXNativeTarget "ArtificialLove" */;
 			buildPhases = (
 				9EB313F55F3C7519392E6906 /* [CP] Check Pods Manifest.lock */,
 				026620081F430E8A00110251 /* Sources */,
@@ -121,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = Haiku4u;
+			name = ArtificialLove;
 			productName = Haiku4u;
-			productReference = 0266200C1F430E8A00110251 /* Haiku4u.app */;
+			productReference = 0266200C1F430E8A00110251 /* ArtificialLove.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 026620071F430E8A00110251 /* Build configuration list for PBXProject "Haiku4u" */;
+			buildConfigurationList = 026620071F430E8A00110251 /* Build configuration list for PBXProject "ArtificialLove" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0266200B1F430E8A00110251 /* Haiku4u */,
+				0266200B1F430E8A00110251 /* ArtificialLove */,
 			);
 		};
 /* End PBXProject section */
@@ -415,7 +415,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		026620071F430E8A00110251 /* Build configuration list for PBXProject "Haiku4u" */ = {
+		026620071F430E8A00110251 /* Build configuration list for PBXProject "ArtificialLove" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0266201C1F430E8A00110251 /* Debug */,
@@ -424,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0266201E1F430E8A00110251 /* Build configuration list for PBXNativeTarget "Haiku4u" */ = {
+		0266201E1F430E8A00110251 /* Build configuration list for PBXNativeTarget "ArtificialLove" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0266201F1F430E8A00110251 /* Debug */,
