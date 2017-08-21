@@ -7,4 +7,5 @@ Neural Network is an LSTM in keras trained on a Haiku database for 10 hours. The
 weights that the network has learned from the training data. The result is the reconstruction of a phrases from the haiku database.
 
 
+![alt text](https://github.com/tothepoweroftom/ArtificialLove/Haiku4u/demo.gif)
 
