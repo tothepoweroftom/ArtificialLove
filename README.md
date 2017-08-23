@@ -7,8 +7,8 @@ Neural Network is an LSTM in keras trained on a Haiku database for 10 hours. The
 weights that the network has learned from the training data. The result is the reconstruction of a phrases from the haiku database.
 
 
-![alt text](https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen2.png?v=4&s=100)
-![alt text](https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen1.png?v=4&s=100)
-![alt text](https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen3.png?v=4&s=100)
+<img src="https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen2.png"  width="200">
+<img src="https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen1.png"  width="200">
 
-<img src="https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen3.png" height="24" width="48">
+
+<img src="https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen3.png"  width="200">
