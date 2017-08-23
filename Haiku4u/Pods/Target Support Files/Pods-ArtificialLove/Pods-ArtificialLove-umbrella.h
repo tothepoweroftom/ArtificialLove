@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Haiku4uVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Haiku4uVersionString[];
+FOUNDATION_EXPORT double Pods_ArtificialLoveVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ArtificialLoveVersionString[];
 

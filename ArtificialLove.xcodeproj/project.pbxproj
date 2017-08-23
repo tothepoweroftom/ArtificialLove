@@ -17,7 +17,7 @@
 		026620251F431C7F00110251 /* Poet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026620231F431C7F00110251 /* Poet.swift */; };
 		026620261F431C7F00110251 /* NetworkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026620241F431C7F00110251 /* NetworkBuilder.swift */; };
 		026620281F431D0100110251 /* haiku29.h5 in Resources */ = {isa = PBXBuildFile; fileRef = 026620271F431D0100110251 /* haiku29.h5 */; };
-		8FAE6E92A2B820650B9D67A1 /* Pods_Haiku4u.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1E12C7A3EAE1BBD30962A2 /* Pods_Haiku4u.framework */; };
+		16D32A64EC3E7CF2AEE37AB6 /* Pods_ArtificialLove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14F852D3A53A131D0001D5 /* Pods_ArtificialLove.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +36,9 @@
 		1A3CAB2703E62CCF378AF197 /* Pods-Haiku4u.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haiku4u.debug.xcconfig"; path = "Haiku4u/Pods/Target Support Files/Pods-Haiku4u/Pods-Haiku4u.debug.xcconfig"; sourceTree = "<group>"; };
 		1F3674F83AB0130509F07903 /* Pods-Haiku4u.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haiku4u.release.xcconfig"; path = "Haiku4u/Pods/Target Support Files/Pods-Haiku4u/Pods-Haiku4u.release.xcconfig"; sourceTree = "<group>"; };
 		3E1E12C7A3EAE1BBD30962A2 /* Pods_Haiku4u.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haiku4u.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		567051715A0434F4EDE97A4D /* Pods-ArtificialLove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtificialLove.debug.xcconfig"; path = "Haiku4u/Pods/Target Support Files/Pods-ArtificialLove/Pods-ArtificialLove.debug.xcconfig"; sourceTree = "<group>"; };
+		7B14F852D3A53A131D0001D5 /* Pods_ArtificialLove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtificialLove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B0F5C8AFC906A1A2A2009E /* Pods-ArtificialLove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtificialLove.release.xcconfig"; path = "Haiku4u/Pods/Target Support Files/Pods-ArtificialLove/Pods-ArtificialLove.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FAE6E92A2B820650B9D67A1 /* Pods_Haiku4u.framework in Frameworks */,
+				16D32A64EC3E7CF2AEE37AB6 /* Pods_ArtificialLove.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,8 @@
 			children = (
 				1A3CAB2703E62CCF378AF197 /* Pods-Haiku4u.debug.xcconfig */,
 				1F3674F83AB0130509F07903 /* Pods-Haiku4u.release.xcconfig */,
+				567051715A0434F4EDE97A4D /* Pods-ArtificialLove.debug.xcconfig */,
+				C7B0F5C8AFC906A1A2A2009E /* Pods-ArtificialLove.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3E1E12C7A3EAE1BBD30962A2 /* Pods_Haiku4u.framework */,
+				7B14F852D3A53A131D0001D5 /* Pods_ArtificialLove.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,12 +188,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Haiku4u/Pods/Target Support Files/Pods-Haiku4u/Pods-Haiku4u-frameworks.sh",
+				"${SRCROOT}/Haiku4u/Pods/Target Support Files/Pods-ArtificialLove/Pods-ArtificialLove-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BrainCore/BrainCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Dropper/Dropper.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework",
 				"${BUILT_PRODUCTS_DIR}/HDF5Kit/HDF5Kit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Upsurge/Upsurge.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -197,11 +204,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyTipView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HDF5Kit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Upsurge.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Haiku4u/Pods/Target Support Files/Pods-Haiku4u/Pods-Haiku4u-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Haiku4u/Pods/Target Support Files/Pods-ArtificialLove/Pods-ArtificialLove-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EB313F55F3C7519392E6906 /* [CP] Check Pods Manifest.lock */ = {
@@ -215,7 +223,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Haiku4u-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ArtificialLove-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -234,7 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Haiku4u/Pods/Target Support Files/Pods-Haiku4u/Pods-Haiku4u-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Haiku4u/Pods/Target Support Files/Pods-ArtificialLove/Pods-ArtificialLove-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -382,14 +390,14 @@
 		};
 		0266201F1F430E8A00110251 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A3CAB2703E62CCF378AF197 /* Pods-Haiku4u.debug.xcconfig */;
+			baseConfigurationReference = 567051715A0434F4EDE97A4D /* Pods-ArtificialLove.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWNK4MCTP;
 				INFOPLIST_FILE = Haiku4u/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.Haiku4u;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,14 +406,14 @@
 		};
 		026620201F430E8A00110251 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F3674F83AB0130509F07903 /* Pods-Haiku4u.release.xcconfig */;
+			baseConfigurationReference = C7B0F5C8AFC906A1A2A2009E /* Pods-ArtificialLove.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWNK4MCTP;
 				INFOPLIST_FILE = Haiku4u/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.Haiku4u;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

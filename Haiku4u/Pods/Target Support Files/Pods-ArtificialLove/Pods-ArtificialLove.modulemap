@@ -1,0 +1,6 @@
+framework module Pods_ArtificialLove {
+  umbrella header "Pods-ArtificialLove-umbrella.h"
+
+  export *
+  module * { export * }
+}

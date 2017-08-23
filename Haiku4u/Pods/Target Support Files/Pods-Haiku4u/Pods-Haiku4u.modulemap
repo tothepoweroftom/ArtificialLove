@@ -1,6 +1,0 @@
-framework module Pods_Haiku4u {
-  umbrella header "Pods-Haiku4u-umbrella.h"
-
-  export *
-  module * { export * }
-}

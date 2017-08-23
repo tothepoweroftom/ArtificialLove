@@ -1,5 +1,5 @@
-project '/Users/tom.power/Developer/Haiku4u/Haiku4u.xcodeproj '
-target 'Haiku4u' do
+project '/Users/tom.power/Developer/Haiku4u/ArtificialLove.xcodeproj '
+target 'ArtificialLove' do
     platform :ios, '10.0'
     use_frameworks!
 
@@ -9,6 +9,7 @@ target 'Haiku4u' do
     pod "Dropper"
     pod 'EasyTipView', '~> 1.0.2'
     pod 'IQKeyboardManagerSwift'
+    pod 'LTMorphingLabel'
 
 end
 

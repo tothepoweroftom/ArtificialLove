@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManagerSwift
 class ViewController: UIViewController {
     
     @IBOutlet weak var startStopButton: UIButton!
@@ -21,8 +21,16 @@ class ViewController: UIViewController {
     //    @IBOutlet weak var label4: UILabel!
     //    @IBOutlet weak var label5: UILabel!
     
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet weak var infoText: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
+    
     @IBOutlet weak var textInput: UITextField!
     
+    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var titleText: UILabel!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var poet: Poet?
@@ -31,6 +39,7 @@ class ViewController: UIViewController {
     var timer2: Timer!
     var seedIndex = 0
     var prevCharCount = 0
+    var seedText = " "
     
     
     override func viewDidLoad() {
@@ -38,15 +47,12 @@ class ViewController: UIViewController {
         let model = "haiku59"
 
         guard let path = Bundle.main.path(forResource: model, ofType: "h5") else {
-            fatalError("Weigths file not found")
+            fatalError("Weights file not found")
         }
         poet = Poet(pathToTrainedWeights: path, chars: appDelegate.chars)
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-
-        
-        startStopButton.layer.cornerRadius = 10.0
-        startStopButton.layer.borderWidth = 1.0
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissKeyboard), name: .UIKeyboardWillHide, object: nil)
 
         
         
@@ -57,8 +63,54 @@ class ViewController: UIViewController {
         #endif
     }
     
+    func fadeViewIn(view: UIView) {
+        let aniDur = 1.0
+        view.alpha = 0.0
+        view.isHidden = false
+        
+        UIView.animate(withDuration: aniDur, animations: {() -> Void in
+            
+            view.alpha = 1.0
+            
+        })
+        
+    }
+    
+    func fadeViewOut(view: UIView) {
+        let aniDur = 1.0
+        view.alpha = 0.0
+        
+        UIView.animate(withDuration: aniDur, animations: {() -> Void in
+            
+            view.alpha = 0.0
+            
+        })
+        
+        view.isHidden = true
+        
+        
+    }
+    
+ 
+    
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        titleText.text = textInput.text
+        
+        guard let text = textInput.text else {
+            //RAISE ALERT
+            return
+        }
+        seedText = text
+        
+        fadeViewIn(view: titleText)
+        fadeViewIn(view: startStopButton)
+        fadeViewIn(view: textView)
+        fadeViewIn(view: infoButton)
+        fadeViewIn(view: refreshButton)
+        fadeViewOut(view: questionLabel)
+        fadeViewOut(view: textInput)
+
         view.endEditing(true)
     }
 
@@ -77,7 +129,7 @@ class ViewController: UIViewController {
         }
 
         disableControls()
-        startStopButton.setTitle("Stop", for: .normal)
+        startStopButton.setTitle("STOP", for: .normal)
 
         if !poet.isPrepared {
             prepare {
@@ -91,28 +143,28 @@ class ViewController: UIViewController {
 
         textView.text = textInput.text?.lowercased()
         poet.temperature = 0.25
-        poet.startEvaluating(textInput.text!) { string in
+        poet.startEvaluating(seedText) { string in
             buffer = buffer + string
             count += 1
-
-            
-            if count > 5 {
-                let bufferCopy = buffer
-                DispatchQueue.main.async() {
-                    self.textView.text = self.textView.text + bufferCopy
-                    self.charCount = self.textView.text.characters.count
-                    print(self.charCount)
-                    if (self.charCount > 500) {
-                        self.charCount = 0
-                        
-                        self.stop()
-                        return
+                
+                if count > 5 {
+                    let bufferCopy = buffer
+                    DispatchQueue.main.async() {
+                        self.textView.text = self.textView.text + bufferCopy
+                        self.charCount = self.textView.text.characters.count
+                        print(self.charCount)
+                        if (self.charCount > 500) {
+                            self.charCount = 0
+                            
+                            self.stop()
+                            return
+                        }
                     }
-                }
 
-                count = 0
-                buffer = ""
-            }
+                    count = 0
+                    buffer = ""
+                }
+        
         }
     }
 
@@ -134,16 +186,52 @@ class ViewController: UIViewController {
     func stop() {
         poet?.stopEvaluating()
         enableControls()
-        startStopButton.setTitle("Begin", for: .normal)
+        startStopButton.setTitle("START", for: .normal)
     }
 
 
     func disableControls() {
         startStopButton.isEnabled = false
+        refreshButton.isEnabled = false
     }
     
     func enableControls() {
         startStopButton.isEnabled = true
+        refreshButton.isEnabled = true
     }
+    
+    @IBAction func refresh(_ sender: UIButton) {
+
+        fadeViewOut(view: titleText)
+        fadeViewOut(view: textView)
+        fadeViewOut(view: startStopButton)
+
+        fadeViewOut(view: infoButton)
+        fadeViewOut(view: refreshButton)
+        fadeViewIn(view: questionLabel)
+        fadeViewIn(view: textInput)
+
+    }
+    
+    @IBAction func infoPressed(_ sender: UIButton) {
+        fadeViewOut(view: titleText)
+        fadeViewOut(view: textView)
+        fadeViewOut(view: infoButton)
+        fadeViewOut(view: startStopButton)
+
+        fadeViewOut(view: refreshButton)
+        fadeViewIn(view: closeButton)
+        fadeViewIn(view: infoText)
+    }
+    @IBAction func closeInfoPressed(_ sender: UIButton) {
+        fadeViewIn(view: titleText)
+        fadeViewIn(view: textView)
+        fadeViewIn(view: infoButton)
+        fadeViewIn(view: startStopButton)
+        fadeViewIn(view: refreshButton)
+        fadeViewOut(view: closeButton)
+        fadeViewOut(view: infoText)
+    }
+    
 }
 
