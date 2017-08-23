@@ -11,3 +11,4 @@ weights that the network has learned from the training data. The result is the r
 ![alt text](https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen1.png | width=30)
 ![alt text](https://raw.githubusercontent.com/tothepoweroftom/ArtificialLove/master/Images/screen3.png | width=30)
 
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250)
